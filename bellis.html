@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<title>Isabelle Wigselius</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<style type="text/css">
+body {
+	overflow:hidden;
+}
+
+#mainContent{
+	background-color: #f9f9f9;
+	text-align: center;
+	height:100vh;
+}
+
+#header {
+	padding-top: 200px;
+}
+
+#headline1 {
+	font-family: Helvetica, sans-serif;
+	font-size: 40pt;
+	font-weight: bold;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.sub-nav {
+	visibility:hidden;
+	padding: 0;
+	position: absolute; 
+
+	color:black;
+	font-size:15px;
+    top:36px;
+    z-index:1;
+    max-height:0;
+    overflow:hidden;
+    -webkit-transform:perspective(400) rotate3d(1,0,0,-90deg);
+    -webkit-transform-origin:50% 0;
+    -webkit-transition:350ms;
+    -moz-transition:350ms;
+    -o-transition:350ms;
+    transition:350ms;
+    line-height:23px;
+}
+
+
+#interaction-design:hover > #sub-nav1 {
+	visibility:visible;
+		max-height:1000px;
+    -webkit-transform:perspective(400) rotate3d(0,0,0,0);
+}
+
+#web-development:hover > #sub-nav2 {
+	visibility:visible;
+	max-height:1000px;
+	-webkit-transform:perspective(400) rotate3d(0,0,0,0);
+}
+
+#nav-primary {
+	padding: 0 20px;
+	list-style: none;
+	position: relative;
+	display: inline-table;
+}
+
+#nav-primary:after {
+		content: ""; clear: both; display: block;
+	}
+.head-li {
+	float: left;
+	color:grey;
+	font-family:"Segoe UI", arial, san-serif;
+	font-size:30px;
+	padding-left:10px; padding-right:10px;
+	cursor:pointer;
+}
+	.head-li:hover {
+		color: orange;
+	}
+#and:hover {
+	color:grey;
+	cursor:initial;
+}
+
+.sub-li {
+		float: none; 
+		position: relative;
+}
+
+#footer {
+	position:absolute;
+	bottom:0;
+	height:30px;
+}
+
+.second-content {
+	display:none;
+	z-index:-10;
+
+}
+
+#button {
+	border:none;
+	font-family:"Segoe UI";
+	font-size:20px;
+	background-color:#f9f9f9;
+	height:50px;
+	width:100px;
+	float:right;
+}
+
+#button:hover {
+	cursor:pointer;
+}
+
+.second-ul {
+	font-family:Segoe UI, arial black, sans-serif;
+	font-weight:bold;
+	font-size:20px;
+	line-height:20px;
+	width:400px;
+	margin-top:100px;
+	float:left;
+	margin-left:105px;
+}
+
+#skills {
+	position:absolute;
+	margin-left:990px;
+}
+
+.second-li:hover {
+	cursor:pointer;
+	font-size:30px;
+}
+
+.skills-li:hover {
+	cursor:pointer;
+	font-size:30px;
+}
+
+.jobs-li:hover {
+	cursor:pointer;
+	font-size:30px;
+}
+.ul-h {
+	font-size:30px;
+}
+
+#jobs {
+	position:absolute;
+	margin-top:420px;
+	margin-left:30px;
+}
+
+#myself:hover {
+	cursor:pointer;
+	font-size: 30px;
+}
+
+#myself {
+	width:600px;
+	position:absolute;
+	margin-top:250px;
+	margin-left:250px;
+	text-align: center;
+}
+
+#text-box {
+	position:absolute;
+	margin-top:300px;
+	margin-left:450px;
+	font-size:20px;
+	font-family:Segoe UI, sans-serif;
+	width:500px;
+}
+
+
+
+
+</style>
+</head>
+
+<body>
+<div class="second-content">
+<ul class="second-ul">
+<li class="ul-h" id="ul-h1">Tidigare arbeten</li>
+<li class="second-li" id="Solutiontree">Solutiontree</li>
+</ul>
+
+<ul class="second-ul" id="skills">
+<li class="ul-h" id="ul-h2">Skills</li>
+<li class="skills-li" id="html">HTML5</li>
+<li class="skills-li" id="css">CSS3</li>
+<li class="skills-li" id="javascript">JavaScript</li>
+<li class="skills-li" id="jquery">jQUERY</li>
+<li class="skills-li" id="users">User Friendly Design</li>
+<li class="skills-li" id="ga">Google Analytics</li>
+</ul>
+
+<ul class="second-ul" id="jobs">
+<li class="ul-h" id="ul-h3">Jobs & Education</li>
+<li class="jobs-li" id="su">Stockholm University</li>
+<li class="jobs-li" id="kth">KTH</li>
+<li class="jobs-li" id="precis-digital">Precis Digital</li>
+</ul>
+
+<ul class="second-ul" id="myself">
+<li id="myself">Who Am I And What's My Name?</li>
+</ul>
+
+<div id="text-box">
+
+</div>
+</div>
+<div id="mainContent">
+	<div id="header">
+	
+	<p id="headline1">ISABELLE WIGSELIUS</p>
+	<nav id="main-nav">
+		<ul id="nav-primary">
+			<li class="head-li" id="interaction-design">INTERACTION DESIGN
+				<ul class="sub-nav" id="sub-nav1">
+					<li class="sub-li" id="interaction-info">I have studied interaction design for three years at Stockholm University. I'm really diggin it!!</li>
+				</ul>
+			</li>
+			<li class="head-li" id="and">AND</li>
+			<li class="head-li" id="web-development">WEB DEVELOPMENT
+				<ul class="sub-nav" id="sub-nav2">
+					<li class="sub-li" id="web-info">Creating websites, read and learn about code is something that have held my interest for the last couple of years. I know my way around html, css, javascript and jQuery, of which I'm an autodidact. Front-end development is my main interest in life.</li>
+				</ul></li>
+		</ul>
+	</nav>
+	</div>
+	
+	<span id="button">Hit me</span>
+	
+</div>
+<div id='footer'>
+</div>
+
+<script src="oriDomi-master/oridomi.js"></script>
+
+<script>
+$(document).ready(function() {
+/*$('#button').hide();
+$('#button').delay(7000).fadeIn().fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);*/
+$('#interaction-info').css('width', $('#interaction-design').width());
+$('#web-info').css('width', $('#web-development').width());
+
+$('#button').click(function() {
+var $folded = $('#mainContent').oriDomi({'vPanels':[10,5,10,5,10,5,5,5,10,10,10,10,5],});
+// when using jQuery, iterate OriDomi methods over multiple elements like this:
+$folded.oriDomi('accordion', 100);
+// to access the OriDomi instance at the top of the jQuery selection directly:
+var folded = $folded.oriDomi(true);
+
+$('.second-content').css({'display':'block'});
+$("#mainContent").delay(1000).fadeOut(300);
+});
+$(function() {
+  $('.skills-li').hover(function() {
+    $('#ul-h2').css('font-size', '20px');
+    /*$('.skills-li').css('line-height','17px');*/
+  }, function() {
+    $('#ul-h2').css('font-size', '30px');
+    $('.skills-li').css('line-height','20px');
+  });
+ });
+$(function() {
+  $('.second-li').hover(function() {
+    $('#ul-h1').css('font-size', '20px');
+   /* $('.second-li').css('line-height','17px');*/
+  }, function() {
+    $('#ul-h1').css('font-size', '30px');
+    $('.second-li').css('line-height','20px');
+  });
+});
+
+$(function() {
+  $('.jobs-li').hover(function() {
+    $('#ul-h3').css('font-size', '20px');
+   /* $('.second-li').css('line-height','17px');*/
+  }, function() {
+    $('#ul-h3').css('font-size', '30px');
+    $('.jobs-li').css('line-height','20px');
+  });
+});
+
+$(document).on("click",".skills-li", function () {
+   var buttonID = $(this).attr('id');
+   if (buttonID == 'jquery')
+   	$('#text-box').prepend(("<p id='jquery-txt'>HEj detta är min text om Jqueryyyy</p>"));
+   if (buttonID == 'javascript')
+   	$('#text-box').prepend(("<p>HEj detta är min text om JAVASCRIPT</p>"));
+   if (buttonID == 'html')
+   	$('#text-box').prepend(("<p>HEj detta är min text om html som jag är mycket mycket bra och erfaren på :)</p>"));
+});
+
+
+});
+</script>
+</body>
+</html>
