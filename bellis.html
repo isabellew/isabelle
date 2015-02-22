@@ -133,8 +133,13 @@ ul {
 }
 
 #skills {
+<<<<<<< HEAD
 	margin-left:360px;
 	margin-top:50px;
+=======
+	position:absolute;
+	margin-left:990px;
+>>>>>>> 3d681b974f944ef28b6085c7e967e7301dbb71e6
 }
 
 .second-li:hover {
@@ -156,6 +161,7 @@ ul {
 }
 
 #jobs {
+<<<<<<< HEAD
 	margin-top:300px;
 }
 
@@ -163,11 +169,29 @@ ul {
 	width:600px;
 	margin-top:300px;
 	margin-left:80px;
+=======
+	position:absolute;
+	margin-top:420px;
+	margin-left:30px;
+}
+
+#myself:hover {
+	cursor:pointer;
+	font-size: 30px;
+}
+
+#myself {
+	width:600px;
+	position:absolute;
+	margin-top:250px;
+	margin-left:250px;
+>>>>>>> 3d681b974f944ef28b6085c7e967e7301dbb71e6
 	text-align: center;
 }
 
 #text-box {
 	position:absolute;
+<<<<<<< HEAD
 	margin-top:150px;
 	margin-left:400px;
 	font-size:20px;
@@ -190,6 +214,16 @@ ul {
 	cursor:pointer;
 	font-size:30px;
 }
+=======
+	margin-top:300px;
+	margin-left:450px;
+	font-size:20px;
+	font-family:Segoe UI, sans-serif;
+	width:500px;
+}
+
+
+>>>>>>> 3d681b974f944ef28b6085c7e967e7301dbb71e6
 
 
 </style>
@@ -210,7 +244,10 @@ ul {
 <li class="skills-li" id="jquery">jQUERY</li>
 <li class="skills-li" id="users">User Friendly Design</li>
 <li class="skills-li" id="ga">Google Analytics</li>
+<<<<<<< HEAD
 <li class="skills-li" id="server">Server-side</li>
+=======
+>>>>>>> 3d681b974f944ef28b6085c7e967e7301dbb71e6
 </ul>
 
 <ul class="second-ul" id="jobs">
@@ -220,14 +257,22 @@ ul {
 <li class="jobs-li" id="precis-digital">Precis Digital</li>
 </ul>
 
+<<<<<<< HEAD
 <ul class="second-ul" id="myself-ul">
 <li class="myself-li" id="myself">Who Am I And What's My Name?</li>
 <li class="myself-li" id="contact">Contact me!</li>
+=======
+<ul class="second-ul" id="myself">
+<li id="myself">Who Am I And What's My Name?</li>
+>>>>>>> 3d681b974f944ef28b6085c7e967e7301dbb71e6
 </ul>
 
 <div id="text-box">
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3d681b974f944ef28b6085c7e967e7301dbb71e6
 </div>
 </div>
 <div id="mainContent">
@@ -266,7 +311,11 @@ $('#interaction-info').css('width', $('#interaction-design').width());
 $('#web-info').css('width', $('#web-development').width());
 
 $('#button').click(function() {
+<<<<<<< HEAD
 var $folded = $('#mainContent').oriDomi({'vPanels':[20,20,10,10,20,20],});
+=======
+var $folded = $('#mainContent').oriDomi({'vPanels':[10,5,10,5,10,5,5,5,10,10,10,10,5],});
+>>>>>>> 3d681b974f944ef28b6085c7e967e7301dbb71e6
 // when using jQuery, iterate OriDomi methods over multiple elements like this:
 $folded.oriDomi('accordion', 100);
 // to access the OriDomi instance at the top of the jQuery selection directly:
@@ -304,6 +353,7 @@ $(function() {
   });
 });
 
+<<<<<<< HEAD
 	
 $(document).on("click",".skills-li", function () {
    var buttonID = $(this).attr('id'); 
@@ -353,6 +403,16 @@ $(document).on("click",".skills-li", function () {
     }
 
   
+=======
+$(document).on("click",".skills-li", function () {
+   var buttonID = $(this).attr('id');
+   if (buttonID == 'jquery')
+   	$('#text-box').prepend(("<p id='jquery-txt'>HEj detta är min text om Jqueryyyy</p>"));
+   if (buttonID == 'javascript')
+   	$('#text-box').prepend(("<p>HEj detta är min text om JAVASCRIPT</p>"));
+   if (buttonID == 'html')
+   	$('#text-box').prepend(("<p>HEj detta är min text om html som jag är mycket mycket bra och erfaren på :)</p>"));
+>>>>>>> 3d681b974f944ef28b6085c7e967e7301dbb71e6
 });
 
 
