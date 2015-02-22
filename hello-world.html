@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<title>Isabelle Wigselius</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<style type="text/css">
+body {
+	overflow:hidden;
+}
+
+#mainContent {
+	background-color: #f9f9f9;
+	text-align: center;
+	height:100vh;
+}
+
+#header {
+	padding-top: 200px;
+}
+
+#headline1 {
+	font-family: Helvetica, sans-serif;
+	font-size: 40pt;
+	font-weight: bold;
+}
+
+.sub-nav {
+	visibility:hidden;
+	padding: 0;
+	position: absolute; 
+
+	list-style-type:none;
+	color:black;
+	font-size:15px;
+    top:36px;
+    z-index:1;
+    max-height:0;
+    overflow:hidden;
+    -webkit-transform:perspective(400) rotate3d(1,0,0,-90deg);
+    -webkit-transform-origin:50% 0;
+    -webkit-transition:350ms;
+    -moz-transition:350ms;
+    -o-transition:350ms;
+    transition:350ms;
+    line-height:23px;
+}
+
+
+#interaction-design:hover > #sub-nav1 {
+	visibility:visible;
+		max-height:1000px;
+    -webkit-transform:perspective(400) rotate3d(0,0,0,0);
+}
+
+#web-development:hover > #sub-nav2 {
+	visibility:visible;
+	max-height:1000px;
+	-webkit-transform:perspective(400) rotate3d(0,0,0,0);
+}
+
+#nav-primary {
+	padding: 0 20px;
+	list-style: none;
+	position: relative;
+	display: inline-table;
+}
+
+#nav-primary:after {
+		content: ""; clear: both; display: block;
+	}
+.head-li {
+	float: left;
+	color:grey;
+	font-family:"Segoe UI", arial, san-serif;
+	font-size:30px;
+	padding-left:10px; padding-right:10px;
+	cursor:pointer;
+}
+	.head-li:hover {
+		color: orange;
+	}
+#and:hover {
+	color:grey;
+	cursor:initial;
+}
+
+.sub-li {
+		float: none; 
+		position: relative;
+}
+
+#footer {
+	position:absolute;
+	bottom:0;
+	height:30px;
+}
+
+#second-ul {
+	position:absolute;
+	display:none;
+	font-weight:bold;
+	font-size:100px;
+	font-family:arial;
+	margin-top:100px;
+	margin-left:250px;
+	z-index:-10;
+	list-style-type:none;
+}
+
+#button {
+	border:none;
+	font-family:"Segoe UI";
+	font-size:20px;
+	background-color:#f9f9f9;
+}
+
+#myself {
+	float:left;
+	margin-top:-70px;
+}
+
+#hej {
+	color:pink;
+	float:left;
+}
+
+
+</style>
+</head>
+
+<body>
+<div id="second-content">
+<ul id="second-ul">
+<li  id="myself"><img src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/10460201_10204700678823643_6914346113247112276_n.jpg?oh=c9ca36e6a78cdf6acda7b07eb8adda96&oe=555EF3C1&__gda__=1430859991_778a021bb9824460864c4620bf74693e"></li>
+<li id="hej">hej</li>
+</ul>
+</div>
+<div id="mainContent">
+	<div id="header">
+	
+	<p id="headline1">ISABELLE WIGSELIUS</p>
+	<nav id="main-nav">
+		<ul id="nav-primary">
+			<li class="head-li" id="interaction-design">INTERACTION DESIGN
+				<ul class="sub-nav" id="sub-nav1">
+					<li class="sub-li" id="interaction-info">I have studied interaction design for three years at Stockholm University. I'm really diggin it!!</li>
+				</ul>
+			</li>
+			<li class="head-li" id="and">AND</li>
+			<li class="head-li" id="web-development">WEB DEVELOPMENT
+				<ul class="sub-nav" id="sub-nav2">
+					<li class="sub-li" id="web-info">Creating web pages, read and learn about code is something that have held my interest for the last couple of years. I know my way around html, css, javascript and jQuery, of which I'm an autodidact.</li>
+				</ul></li>
+		</ul>
+	</nav>
+	</div>
+	<button id="button" style="float:right">
+	Hit me
+	</button>
+</div>
+<div id='footer'>
+</div>
+
+<script src="oriDomi-master/oridomi.js"></script>
+
+<script>
+$(document).ready(function() {
+$('#button').hide();
+$('#button').delay(7000).fadeIn().fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+$('#interaction-info').css('width', $('#interaction-design').width());
+$('#web-info').css('width', $('#web-development').width());
+
+$('#button').click(function() {
+var $folded = $('#mainContent').oriDomi({'vPanels':[10,5,10,5,10,5,5,5,10,10,10,10,5],});
+// when using jQuery, iterate OriDomi methods over multiple elements like this:
+$folded.oriDomi('accordion', 100);
+// to access the OriDomi instance at the top of the jQuery selection directly:
+var folded = $folded.oriDomi(true);
+
+$('#second-ul').css({'display':'block'});
+document.location.hash = "info";
+});
+});
+</script>
+</body>
+</html>
